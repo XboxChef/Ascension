@@ -1,0 +1,58 @@
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.csprojResolveAssemblyReference.cache
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.csproj.CoreCompileInputs.cache
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\bin\Debug\Ascension.exe.config
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\bin\Debug\Ascension.exe
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\bin\Debug\Ascension.pdb
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\bin\Debug\HaloDevelopmentExtender.dll
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\bin\Debug\HaloReach3d.dll
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.csproj.CopyComplete
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.exe
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.pdb
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\bin\Debug\xdevkit.dll
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.Form1.resources
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.Halo_Reach.Game.Plugins.Forms.PluginEditorForm.resources
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.Halo_Reach.Game.Tag_Editor.Dialog.TagEditorSettingsDialog.resources
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.Patches.File_Patches.ApplyPatchForm.resources
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.Patches.File_Patches.CreatePatchForm.resources
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.Patches.File_Patches.PokePatchForm.resources
+C:\Users\SilentSerenity\Documents\Reflector\Disassembler\Ascension\obj\x86\Debug\Ascension.csproj.GenerateResource.cache
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.csprojResolveAssemblyReference.cache
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.Form11.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.Form1.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.Halo_Reach.Game.Plugins.Forms.PluginEditorForm.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.Halo_Reach.Game.Tag_Editor.Dialog.TagEditorSettingsDialog.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.Patches.File_Patches.CreatePatchForm.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.Patches.File_Patches.ApplyPatchForm.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.Patches.File_Patches.PokePatchForm.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.csproj.GenerateResource.cache
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.csproj.CoreCompileInputs.cache
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.exe
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.pdb
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\bin\Debug\Ascension.exe.config
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\bin\Debug\Ascension.exe
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\bin\Debug\Ascension.pdb
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\bin\Debug\HaloDevelopmentExtender.dll
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\bin\Debug\HaloReach3d.dll
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\bin\Debug\xdevkit.dll
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension\obj\x86\Debug\Ascension.csproj.CopyComplete
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.csprojResolveAssemblyReference.cache
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.Form11.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.Form1.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.Halo_Reach.Game.Plugins.Forms.PluginEditorForm.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.Halo_Reach.Game.Tag_Editor.Dialog.TagEditorSettingsDialog.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.Patches.File_Patches.CreatePatchForm.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.Patches.File_Patches.ApplyPatchForm.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.Patches.File_Patches.PokePatchForm.resources
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.csproj.GenerateResource.cache
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.csproj.CoreCompileInputs.cache
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\bin\Debug\Ascension.exe.config
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\bin\Debug\Ascension.exe
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\bin\Debug\Ascension.pdb
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\bin\Debug\HaloReach3d.dll
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\bin\Debug\xdevkit.dll
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.csproj.CopyComplete
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.exe
+C:\Users\SilentSerenity\Documents\Visual Studio 2017\Projects\Ascension - Original\obj\x86\Debug\Ascension.pdb

@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5EC4487C-49C4-47CE-B405-089D8118FF0C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>Ascension</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CaptureAscension.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="HaloDevelopmentExtender\EndianIO.cs" />
+    <Compile Include="HaloDevelopmentExtender\EndianReader.cs" />
+    <Compile Include="HaloDevelopmentExtender\EndianType.cs" />
+    <Compile Include="HaloDevelopmentExtender\EndianWriter.cs" />
+    <Compile Include="HaloDevelopmentExtender\XboxDebugCommunicator.cs" />
+    <Compile Include="HaloDevelopmentExtender\XboxMemoryStream.cs" />
+    <Reference Include="HaloReach3d, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Desktop\ProjectSerenity\peek-poker-master\peek-poker-master\PeekPoker\bin\Release\HaloReach3d.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Newtonsoft.Json" />
+    <Compile Include="Ascension\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Map_Package\Info\BLF_Header.cs" />
+    <Compile Include="Ascension\Halo_Reach\Map_Package\Info\InfoFile.cs" />
+    <Compile Include="Ascension\Halo_Reach\Map_Package\Package_Classes\BLFImageFile.cs" />
+    <Compile Include="Ascension\Halo_Reach\Map_Package\Package_Classes\EOF_Footer.cs" />
+    <Compile Include="Ascension\Patches\File_Patches\CreatePatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Patches\File_Patches\CreatePatchForm.Designer.cs">
+      <DependentUpon>CreatePatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ascension\Patches\File_Patches\ApplyPatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Patches\File_Patches\ApplyPatchForm.Designer.cs">
+      <DependentUpon>ApplyPatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Ascension\Patches\File_Patches\PokePatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Patches\File_Patches\PokePatchForm.Designer.cs">
+      <DependentUpon>PokePatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Ascension\Security\Security.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\TagEditorContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Plugins\Forms\PluginEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiStringID.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Plugins\PluginGeneratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\MapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\Extras\Controls\xex_slider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Properties\Resources.cs" />
+    <Compile Include="Ascension\Forms\Dialog\Tag_merger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiTagBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Plugins\XmlParser.cs" />
+    <Compile Include="Ascension\Halo_Reach\Plugins\PluginLayoutCreator.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Misc\Dialogs\Memory_Reader_and_Writer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\Extras\PlayerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Details\AscensionDetails.cs" />
+    <Compile Include="Ascension\Settings\Properties\UIFileProperty.cs" />
+    <Compile Include="Ascension\Helpers\BitHelper.cs" />
+    <Compile Include="Ascension\Halo_Reach\Misc\GameGlobalEditor.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiValue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiUnused.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\Extras\xex_offset_manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\Extras\Items.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Grid\TagGridContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\Dialog\tagblockview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Raw\Bitmaps\BitmapViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Misc\uiXvalue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\Extras\AnniversaryMagic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Settings\ISettings.cs" />
+    <Compile Include="Ascension\Settings\ISettingList!1.cs" />
+    <Compile Include="Ascension\Settings\Settings.cs" />
+    <Compile Include="Ascension\Settings\AppSettings.cs" />
+    <Compile Include="Ascension\Halo_Reach\Tag_Grid\Dialog\IdentSwapper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiByteArray.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\Extras\slider_poker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiEnum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiBitmask.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Program.cs" />
+    <Compile Include="Ascension\Halo_Reach\String___Locale\StringLocaleEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Misc\Dialogs\StingIds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Controls\MapPreviewPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\Extras\Controls\xex_value.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileDownloader.cs" />
+    <Compile Include="Ascension\Halo_Reach\XboxScreenshot.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Dialog\TagEditorSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiTagData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\Dialog\uiIdentSwapper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\ScreenshotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Patches\File_Patches\AscendedPatch.cs" />
+    <Compile Include="Ascension\Halo_Reach\Map_File\Misc\Dialogs\SwapTagHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Misc\Dialogs\Finder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\Dialog\ChangeLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiIdent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Classes\TagEditorHandler.cs" />
+    <Compile Include="Ascension\Details\ChangeLogs.cs" />
+    <Compile Include="Ascension\Details\ChangeType.cs" />
+    <Compile Include="Ascension\Details\Change.cs" />
+    <Compile Include="Ascension\Settings\Properties\UIFolderProperty.cs" />
+    <Compile Include="Ascension\Properties\Settings.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Classes\TagEditorSettings.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Misc\Dialogs\Halo_String_ID_Database.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Update\RC4Engine.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Misc\Dialogs\TagNameDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Forms\TagComparison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiColor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Meta_Parser\MetaParser.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Tag_Editor\Controls\uiComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ascension\Halo_Reach\Values\mRevision.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mValue.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mTagBlock.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mTagData.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mTagReference.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mStringID.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mBitmask.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mBitmask8.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mBitmask16.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mBitmask32.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mBitOption.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mEnum.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mEnum8.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mEnum16.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mEnum32.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mEnumOption.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mByte.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mInt16.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mUInt16.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mInt32.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mUInt32.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mFloat.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mString.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mUnicode.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mUndefined.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mUnused.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mComment.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mColorBlock.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mColorBlock8.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mColorBlock16.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mColorBlock32.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mColorBlockF.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\mByteArray.cs" />
+    <Compile Include="Ascension\Halo_Reach\Values\ColorBlockPart.cs" />
+    <Compile Include="Ascension\Poke_objects.cs" />
+    <Compile Include="Ascension\Communications\Output\OutputMessenger.cs" />
+    <Compile Include="Ascension\Halo_Reach\Game\Misc\Dialogs\TreenodeCompare.cs" />
+    <Reference Include="xdevkit">
+      <HintPath>..\..\..\..\Desktop\ProjectSerenity\ProjectSerenity\bin\Debug\xdevkit.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CaptureAscension.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ascension\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ascension\Halo_Reach\Game\Plugins\Forms\PluginEditorForm.resx">
+      <DependentUpon>PluginEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ascension\Halo_Reach\Game\Tag_Editor\Dialog\TagEditorSettingsDialog.resx">
+      <DependentUpon>TagEditorSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ascension\Patches\File_Patches\CreatePatchForm.resx">
+      <DependentUpon>CreatePatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ascension\Patches\File_Patches\ApplyPatchForm.resx">
+      <DependentUpon>ApplyPatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ascension\Patches\File_Patches\PokePatchForm.resx">
+      <DependentUpon>PokePatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
