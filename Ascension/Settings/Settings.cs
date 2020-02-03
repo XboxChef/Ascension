@@ -395,17 +395,7 @@
         }
 
         [Category("Screenshot Settings"), Description("If Resize Screenshots is set to true this will be the new width")]
-        public int ScreenshotWidth
-        {
-            get
-            {
-                return _screenshotWidth;
-            }
-            set
-            {
-                _screenshotWidth = value;
-            }
-        }
+        public int ScreenshotWidth { get; set; }
 
         [Browsable(false), Category("General Settings"), Description("User that created this settings file")]
         public string SettingsAuthor

@@ -5,6 +5,8 @@
     using System.ComponentModel;
     using System.Drawing;
     using System.Windows.Forms;
+    using JRPC_Client;
+    using Utility;
 
     public class SettingsForm : Form
     {
@@ -99,6 +101,7 @@
         private TextBox txtXdkName;
         private NumericUpDown udGamma;
         private NumericUpDown udScreenHeight;
+        private Button button9;
         private NumericUpDown udScreenWidth;
 
         public SettingsForm()
@@ -378,851 +381,1255 @@
 
         private void InitializeComponent()
         {
-            ComponentResourceManager manager = new ComponentResourceManager(typeof(SettingsForm));
-            lblTitle = new Label();
-            panel1 = new Panel();
-            pbxLogo = new PictureBox();
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            groupBox4 = new GroupBox();
-            rbForceCampaign = new RadioButton();
-            rbForceMultiplayer = new RadioButton();
-            groupBox3 = new GroupBox();
-            cbOpenMap = new CheckBox();
-            btnAutoMapPath = new Button();
-            lblMapToOpen = new Label();
-            txtAutoMapPath = new TextBox();
-            cbUpdates = new CheckBox();
-            txtXdkName = new TextBox();
-            label1 = new Label();
-            tabPage2 = new TabPage();
-            groupBox2 = new GroupBox();
-            label6 = new Label();
-            label5 = new Label();
-            txtRetailDir = new TextBox();
-            btnBetaDir = new Button();
-            btnRetailDir = new Button();
-            txtBetaDir = new TextBox();
-            groupBox1 = new GroupBox();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            btnImageDir = new Button();
-            btnMapinfoDir = new Button();
-            btnMapDir = new Button();
-            txtImageDir = new TextBox();
-            txtMapinfoDir = new TextBox();
-            txtMapDir = new TextBox();
-            tabPage3 = new TabPage();
-            groupBox5 = new GroupBox();
-            cbOldSwapper = new CheckBox();
-            cbInvisibles = new CheckBox();
-            tabPage4 = new TabPage();
-            groupBox8 = new GroupBox();
-            lblGamma = new Label();
-            udGamma = new NumericUpDown();
-            cbGamma = new CheckBox();
-            groupBox7 = new GroupBox();
-            lblScreenHeight = new Label();
-            udScreenHeight = new NumericUpDown();
-            lblScreenWidth = new Label();
-            udScreenWidth = new NumericUpDown();
-            cbResizeScreens = new CheckBox();
-            groupBox6 = new GroupBox();
-            btnScreenDir = new Button();
-            lblScreenLocation = new Label();
-            txtScreenDir = new TextBox();
-            cbSaveScreenshots = new CheckBox();
-            tabPage5 = new TabPage();
-            groupBox9 = new GroupBox();
-            button2 = new Button();
-            gameslist = new ListBox();
-            button1 = new Button();
-            Gametxt = new TextBox();
-            tabPage6 = new TabPage();
-            tabControl2 = new TabControl();
-            tabPage7 = new TabPage();
-            label8 = new Label();
-            p_1_d = new TextBox();
-            label9 = new Label();
-            label7 = new Label();
-            button4 = new Button();
-            button3 = new Button();
-            p_1_m = new TextBox();
-            p_1 = new TextBox();
-            tabPage8 = new TabPage();
-            label10 = new Label();
-            p_2_d = new TextBox();
-            label11 = new Label();
-            label12 = new Label();
-            button5 = new Button();
-            button6 = new Button();
-            p_2_m = new TextBox();
-            p_2 = new TextBox();
-            tabPage9 = new TabPage();
-            label13 = new Label();
-            p_3_d = new TextBox();
-            label14 = new Label();
-            label15 = new Label();
-            button7 = new Button();
-            button8 = new Button();
-            p_3_m = new TextBox();
-            p_3 = new TextBox();
-            btnOK = new Button();
-            btnCancel = new Button();
-            panel1.SuspendLayout();
-            ((ISupportInitialize) pbxLogo).BeginInit();
-            tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            groupBox4.SuspendLayout();
-            groupBox3.SuspendLayout();
-            tabPage2.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox1.SuspendLayout();
-            tabPage3.SuspendLayout();
-            groupBox5.SuspendLayout();
-            tabPage4.SuspendLayout();
-            groupBox8.SuspendLayout();
-            udGamma.BeginInit();
-            groupBox7.SuspendLayout();
-            udScreenHeight.BeginInit();
-            udScreenWidth.BeginInit();
-            groupBox6.SuspendLayout();
-            tabPage5.SuspendLayout();
-            groupBox9.SuspendLayout();
-            tabPage6.SuspendLayout();
-            tabControl2.SuspendLayout();
-            tabPage7.SuspendLayout();
-            tabPage8.SuspendLayout();
-            tabPage9.SuspendLayout();
-            base.SuspendLayout();
-            lblTitle.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top;
-            lblTitle.Font = new Font("Microsoft Sans Serif", 14f, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTitle.Location = new Point(0x3b, 9);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(0x1ff, 0x1d);
-            lblTitle.TabIndex = 0;
-            lblTitle.Text = "Ascension Settings";
-            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
-            panel1.Controls.Add(lblTitle);
-            panel1.Controls.Add(pbxLogo);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(0x23e, 0x33);
-            panel1.TabIndex = 0x15;
-            pbxLogo.Location = new Point(3, 3);
-            pbxLogo.Name = "pbxLogo";
-            pbxLogo.Size = new Size(50, 0x2d);
-            pbxLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbxLogo.TabIndex = 4;
-            pbxLogo.TabStop = false;
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Controls.Add(tabPage3);
-            tabControl1.Controls.Add(tabPage4);
-            tabControl1.Controls.Add(tabPage5);
-            tabControl1.Controls.Add(tabPage6);
-            tabControl1.Location = new Point(12, 0x39);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(550, 0xde);
-            tabControl1.TabIndex = 0x16;
-            tabPage1.Controls.Add(groupBox4);
-            tabPage1.Controls.Add(groupBox3);
-            tabPage1.Controls.Add(txtXdkName);
-            tabPage1.Controls.Add(label1);
-            tabPage1.Location = new Point(4, 0x16);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(0x21e, 0xc4);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "General";
-            tabPage1.UseVisualStyleBackColor = true;
-            groupBox4.Controls.Add(rbForceCampaign);
-            groupBox4.Controls.Add(rbForceMultiplayer);
-            groupBox4.Location = new Point(6, 0x92);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(530, 0x2c);
-            groupBox4.TabIndex = 7;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "Force Map Loading (does not apply to ff10_prototype)";
-            rbForceCampaign.AutoSize = true;
-            rbForceCampaign.Location = new Point(0x88, 0x13);
-            rbForceCampaign.Name = "rbForceCampaign";
-            rbForceCampaign.Size = new Size(0x71, 0x11);
-            rbForceCampaign.TabIndex = 1;
-            rbForceCampaign.TabStop = true;
-            rbForceCampaign.Text = "Load as Campaign";
-            rbForceCampaign.UseVisualStyleBackColor = true;
-            rbForceMultiplayer.AutoSize = true;
-            rbForceMultiplayer.Location = new Point(11, 0x13);
-            rbForceMultiplayer.Name = "rbForceMultiplayer";
-            rbForceMultiplayer.Size = new Size(0x74, 0x11);
-            rbForceMultiplayer.TabIndex = 0;
-            rbForceMultiplayer.TabStop = true;
-            rbForceMultiplayer.Text = "Load as Multiplayer";
-            rbForceMultiplayer.UseVisualStyleBackColor = true;
-            groupBox3.Controls.Add(cbOpenMap);
-            groupBox3.Controls.Add(btnAutoMapPath);
-            groupBox3.Controls.Add(lblMapToOpen);
-            groupBox3.Controls.Add(txtAutoMapPath);
-            groupBox3.Controls.Add(cbUpdates);
-            groupBox3.Location = new Point(6, 0x23);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(5, 3, 3, 3);
-            groupBox3.Size = new Size(530, 0x69);
-            groupBox3.TabIndex = 6;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Startup";
-            cbOpenMap.AutoSize = true;
-            cbOpenMap.Location = new Point(11, 0x2a);
-            cbOpenMap.Name = "cbOpenMap";
-            cbOpenMap.Size = new Size(0xa3, 0x11);
-            cbOpenMap.TabIndex = 4;
-            cbOpenMap.Text = "Automatically open a map file";
-            cbOpenMap.UseVisualStyleBackColor = true;
-            cbOpenMap.CheckedChanged += new EventHandler(cbOpenMap_CheckedChanged);
-            btnAutoMapPath.Enabled = false;
-            btnAutoMapPath.Location = new Point(0x1c1, 0x42);
-            btnAutoMapPath.Name = "btnAutoMapPath";
-            btnAutoMapPath.Size = new Size(0x4b, 0x17);
-            btnAutoMapPath.TabIndex = 3;
-            btnAutoMapPath.Text = "Browse...";
-            btnAutoMapPath.UseVisualStyleBackColor = true;
-            btnAutoMapPath.Click += new EventHandler(btnAutoMapPath_Click);
-            lblMapToOpen.AutoSize = true;
-            lblMapToOpen.Enabled = false;
-            lblMapToOpen.Location = new Point(8, 0x47);
-            lblMapToOpen.Name = "lblMapToOpen";
-            lblMapToOpen.Size = new Size(70, 13);
-            lblMapToOpen.TabIndex = 2;
-            lblMapToOpen.Text = "Map to open:";
-            txtAutoMapPath.Enabled = false;
-            txtAutoMapPath.Location = new Point(0x54, 0x44);
-            txtAutoMapPath.Name = "txtAutoMapPath";
-            txtAutoMapPath.Size = new Size(0x167, 20);
-            txtAutoMapPath.TabIndex = 1;
-            cbUpdates.AutoSize = true;
-            cbUpdates.Enabled = false;
-            cbUpdates.Location = new Point(11, 0x13);
-            cbUpdates.Name = "cbUpdates";
-            cbUpdates.Size = new Size(0x71, 0x11);
-            cbUpdates.TabIndex = 0;
-            cbUpdates.Text = "Check for updates";
-            cbUpdates.UseVisualStyleBackColor = true;
-            txtXdkName.Location = new Point(0x5c, 9);
-            txtXdkName.Name = "txtXdkName";
-            txtXdkName.Size = new Size(0xb1, 20);
-            txtXdkName.TabIndex = 5;
-            label1.AutoSize = true;
-            label1.Location = new Point(8, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(0x4e, 13);
-            label1.TabIndex = 4;
-            label1.Text = "XDK Name/IP:";
-            tabPage2.Controls.Add(groupBox2);
-            tabPage2.Controls.Add(groupBox1);
-            tabPage2.Location = new Point(4, 0x16);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(0x21e, 0xc4);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Paths";
-            tabPage2.UseVisualStyleBackColor = true;
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(txtRetailDir);
-            groupBox2.Controls.Add(btnBetaDir);
-            groupBox2.Controls.Add(btnRetailDir);
-            groupBox2.Controls.Add(txtBetaDir);
-            groupBox2.Location = new Point(6, 0x70);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(530, 0x4e);
-            groupBox2.TabIndex = 5;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Plugin Paths";
-            label6.AutoSize = true;
-            label6.Location = new Point(8, 50);
-            label6.Name = "label6";
-            label6.Size = new Size(0x45, 13);
-            label6.TabIndex = 0x10;
-            label6.Text = "Beta Plugins:";
-            label5.AutoSize = true;
-            label5.Location = new Point(8, 0x18);
-            label5.Name = "label5";
-            label5.Size = new Size(0x4a, 13);
-            label5.TabIndex = 15;
-            label5.Text = "Retail Plugins:";
-            txtRetailDir.Location = new Point(90, 0x16);
-            txtRetailDir.Name = "txtRetailDir";
-            txtRetailDir.Size = new Size(0x161, 20);
-            txtRetailDir.TabIndex = 14;
-            btnBetaDir.Location = new Point(0x1c1, 0x2d);
-            btnBetaDir.Name = "btnBetaDir";
-            btnBetaDir.Size = new Size(0x4b, 0x17);
-            btnBetaDir.TabIndex = 13;
-            btnBetaDir.Text = "Browse...";
-            btnBetaDir.UseVisualStyleBackColor = true;
-            btnBetaDir.Click += new EventHandler(btnBetaDir_Click);
-            btnRetailDir.Location = new Point(0x1c1, 20);
-            btnRetailDir.Name = "btnRetailDir";
-            btnRetailDir.Size = new Size(0x4b, 0x17);
-            btnRetailDir.TabIndex = 12;
-            btnRetailDir.Text = "Browse...";
-            btnRetailDir.UseVisualStyleBackColor = true;
-            btnRetailDir.Click += new EventHandler(btnRetailDir_Click);
-            txtBetaDir.Location = new Point(90, 0x2f);
-            txtBetaDir.Name = "txtBetaDir";
-            txtBetaDir.Size = new Size(0x161, 20);
-            txtBetaDir.TabIndex = 11;
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(btnImageDir);
-            groupBox1.Controls.Add(btnMapinfoDir);
-            groupBox1.Controls.Add(btnMapDir);
-            groupBox1.Controls.Add(txtImageDir);
-            groupBox1.Controls.Add(txtMapinfoDir);
-            groupBox1.Controls.Add(txtMapDir);
-            groupBox1.Location = new Point(6, 6);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(5, 3, 3, 3);
-            groupBox1.Size = new Size(530, 100);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "General Paths";
-            label4.AutoSize = true;
-            label4.Location = new Point(8, 0x4a);
-            label4.Name = "label4";
-            label4.Size = new Size(0x44, 13);
-            label4.TabIndex = 10;
-            label4.Text = "Map Images:";
-            label3.AutoSize = true;
-            label3.Location = new Point(8, 0x30);
-            label3.Name = "label3";
-            label3.Size = new Size(0x31, 13);
-            label3.TabIndex = 9;
-            label3.Text = "MapInfo:";
-            label2.AutoSize = true;
-            label2.Location = new Point(8, 0x16);
-            label2.Name = "label2";
-            label2.Size = new Size(0x24, 13);
-            label2.TabIndex = 8;
-            label2.Text = "Maps:";
-            btnImageDir.Location = new Point(0x1c1, 0x45);
-            btnImageDir.Name = "btnImageDir";
-            btnImageDir.Size = new Size(0x4b, 0x17);
-            btnImageDir.TabIndex = 7;
-            btnImageDir.Text = "Browse...";
-            btnImageDir.UseVisualStyleBackColor = true;
-            btnImageDir.Click += new EventHandler(btnImageDir_Click);
-            btnMapinfoDir.Location = new Point(0x1c1, 0x2b);
-            btnMapinfoDir.Name = "btnMapinfoDir";
-            btnMapinfoDir.Size = new Size(0x4b, 0x17);
-            btnMapinfoDir.TabIndex = 6;
-            btnMapinfoDir.Text = "Browse...";
-            btnMapinfoDir.UseVisualStyleBackColor = true;
-            btnMapinfoDir.Click += new EventHandler(btnMapinfoDir_Click);
-            btnMapDir.Location = new Point(0x1c1, 0x11);
-            btnMapDir.Name = "btnMapDir";
-            btnMapDir.Size = new Size(0x4b, 0x17);
-            btnMapDir.TabIndex = 5;
-            btnMapDir.Text = "Browse...";
-            btnMapDir.UseVisualStyleBackColor = true;
-            btnMapDir.Click += new EventHandler(btnMapDir_Click);
-            txtImageDir.Location = new Point(90, 0x47);
-            txtImageDir.Name = "txtImageDir";
-            txtImageDir.Size = new Size(0x161, 20);
-            txtImageDir.TabIndex = 2;
-            txtMapinfoDir.Location = new Point(90, 0x2d);
-            txtMapinfoDir.Name = "txtMapinfoDir";
-            txtMapinfoDir.Size = new Size(0x161, 20);
-            txtMapinfoDir.TabIndex = 1;
-            txtMapDir.Location = new Point(90, 0x13);
-            txtMapDir.Name = "txtMapDir";
-            txtMapDir.Size = new Size(0x161, 20);
-            txtMapDir.TabIndex = 0;
-            tabPage3.Controls.Add(groupBox5);
-            tabPage3.Location = new Point(4, 0x16);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(0x21e, 0xc4);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Editor";
-            tabPage3.UseVisualStyleBackColor = true;
-            groupBox5.Controls.Add(cbOldSwapper);
-            groupBox5.Controls.Add(cbInvisibles);
-            groupBox5.Location = new Point(6, 6);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Padding = new Padding(5, 3, 3, 3);
-            groupBox5.Size = new Size(530, 0x43);
-            groupBox5.TabIndex = 0;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Tag Editor";
-            cbOldSwapper.AutoSize = true;
-            cbOldSwapper.Location = new Point(11, 0x2a);
-            cbOldSwapper.Name = "cbOldSwapper";
-            cbOldSwapper.Size = new Size(0x95, 0x11);
-            cbOldSwapper.TabIndex = 2;
-            cbOldSwapper.Text = "Use the old ident swapper";
-            cbOldSwapper.UseVisualStyleBackColor = true;
-            cbInvisibles.AutoSize = true;
-            cbInvisibles.Location = new Point(11, 0x13);
-            cbInvisibles.Name = "cbInvisibles";
-            cbInvisibles.Size = new Size(0x7f, 0x11);
-            cbInvisibles.TabIndex = 0;
-            cbInvisibles.Text = "Show invisible values";
-            cbInvisibles.UseVisualStyleBackColor = true;
-            tabPage4.Controls.Add(groupBox8);
-            tabPage4.Controls.Add(groupBox7);
-            tabPage4.Controls.Add(groupBox6);
-            tabPage4.Location = new Point(4, 0x16);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(0x21e, 0xc4);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "Screenshots";
-            tabPage4.UseVisualStyleBackColor = true;
-            groupBox8.Controls.Add(lblGamma);
-            groupBox8.Controls.Add(udGamma);
-            groupBox8.Controls.Add(cbGamma);
-            groupBox8.Location = new Point(0x111, 0x55);
-            groupBox8.Name = "groupBox8";
-            groupBox8.Padding = new Padding(5, 3, 3, 3);
-            groupBox8.Size = new Size(0x107, 100);
-            groupBox8.TabIndex = 2;
-            groupBox8.TabStop = false;
-            groupBox8.Text = "Gamma Adjustment";
-            lblGamma.AutoSize = true;
-            lblGamma.Enabled = false;
-            lblGamma.Location = new Point(8, 0x2c);
-            lblGamma.Name = "lblGamma";
-            lblGamma.Size = new Size(0x2e, 13);
-            lblGamma.TabIndex = 2;
-            lblGamma.Text = "Amount:";
-            udGamma.DecimalPlaces = 2;
-            udGamma.Enabled = false;
-            int[] bits = new int[4];
-            bits[0] = 1;
-            bits[3] = 0x10000;
-            udGamma.Increment = new decimal(bits);
-            udGamma.Location = new Point(60, 0x2a);
-            udGamma.Name = "udGamma";
-            udGamma.Size = new Size(0x38, 20);
-            udGamma.TabIndex = 1;
-            cbGamma.AutoSize = true;
-            cbGamma.Location = new Point(11, 0x13);
-            cbGamma.Name = "cbGamma";
-            cbGamma.Size = new Size(0x5c, 0x11);
-            cbGamma.TabIndex = 0;
-            cbGamma.Text = "Adjust gamma";
-            cbGamma.UseVisualStyleBackColor = true;
-            cbGamma.CheckedChanged += new EventHandler(cbGamma_CheckedChanged);
-            groupBox7.Controls.Add(lblScreenHeight);
-            groupBox7.Controls.Add(udScreenHeight);
-            groupBox7.Controls.Add(lblScreenWidth);
-            groupBox7.Controls.Add(udScreenWidth);
-            groupBox7.Controls.Add(cbResizeScreens);
-            groupBox7.Location = new Point(6, 0x55);
-            groupBox7.Name = "groupBox7";
-            groupBox7.Padding = new Padding(5, 3, 3, 3);
-            groupBox7.Size = new Size(0x105, 100);
-            groupBox7.TabIndex = 1;
-            groupBox7.TabStop = false;
-            groupBox7.Text = "Resizing";
-            lblScreenHeight.AutoSize = true;
-            lblScreenHeight.Enabled = false;
-            lblScreenHeight.Location = new Point(8, 70);
-            lblScreenHeight.Name = "lblScreenHeight";
-            lblScreenHeight.Size = new Size(0x29, 13);
-            lblScreenHeight.TabIndex = 4;
-            lblScreenHeight.Text = "Height:";
-            udScreenHeight.Enabled = false;
-            udScreenHeight.Location = new Point(0x37, 0x44);
-            bits = new int[4];
-            bits[0] = 0x2710;
-            udScreenHeight.Maximum = new decimal(bits);
-            bits = new int[4];
-            bits[0] = 1;
-            udScreenHeight.Minimum = new decimal(bits);
-            udScreenHeight.Name = "udScreenHeight";
-            udScreenHeight.Size = new Size(0x3a, 20);
-            udScreenHeight.TabIndex = 3;
-            bits = new int[4];
-            bits[0] = 1;
-            udScreenHeight.Value = new decimal(bits);
-            lblScreenWidth.AutoSize = true;
-            lblScreenWidth.Enabled = false;
-            lblScreenWidth.Location = new Point(8, 0x2c);
-            lblScreenWidth.Name = "lblScreenWidth";
-            lblScreenWidth.Size = new Size(0x26, 13);
-            lblScreenWidth.TabIndex = 2;
-            lblScreenWidth.Text = "Width:";
-            udScreenWidth.Enabled = false;
-            udScreenWidth.Location = new Point(0x37, 0x2a);
-            bits = new int[4];
-            bits[0] = 0x2710;
-            udScreenWidth.Maximum = new decimal(bits);
-            bits = new int[4];
-            bits[0] = 1;
-            udScreenWidth.Minimum = new decimal(bits);
-            udScreenWidth.Name = "udScreenWidth";
-            udScreenWidth.Size = new Size(0x3a, 20);
-            udScreenWidth.TabIndex = 1;
-            bits = new int[4];
-            bits[0] = 1;
-            udScreenWidth.Value = new decimal(bits);
-            cbResizeScreens.AutoSize = true;
-            cbResizeScreens.Location = new Point(11, 0x13);
-            cbResizeScreens.Name = "cbResizeScreens";
-            cbResizeScreens.Size = new Size(0x76, 0x11);
-            cbResizeScreens.TabIndex = 0;
-            cbResizeScreens.Text = "Resize screenshots";
-            cbResizeScreens.UseVisualStyleBackColor = true;
-            cbResizeScreens.CheckedChanged += new EventHandler(cbResizeScreens_CheckedChanged);
-            groupBox6.Controls.Add(btnScreenDir);
-            groupBox6.Controls.Add(lblScreenLocation);
-            groupBox6.Controls.Add(txtScreenDir);
-            groupBox6.Controls.Add(cbSaveScreenshots);
-            groupBox6.Location = new Point(6, 6);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Padding = new Padding(5, 3, 3, 3);
-            groupBox6.Size = new Size(530, 0x49);
-            groupBox6.TabIndex = 0;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "Saving";
-            btnScreenDir.Enabled = false;
-            btnScreenDir.Location = new Point(0x1c1, 40);
-            btnScreenDir.Name = "btnScreenDir";
-            btnScreenDir.Size = new Size(0x4b, 0x17);
-            btnScreenDir.TabIndex = 3;
-            btnScreenDir.Text = "Browse...";
-            btnScreenDir.UseVisualStyleBackColor = true;
-            btnScreenDir.Click += new EventHandler(btnScreenDir_Click);
-            lblScreenLocation.AutoSize = true;
-            lblScreenLocation.Enabled = false;
-            lblScreenLocation.Location = new Point(8, 0x2d);
-            lblScreenLocation.Name = "lblScreenLocation";
-            lblScreenLocation.Size = new Size(0x33, 13);
-            lblScreenLocation.TabIndex = 2;
-            lblScreenLocation.Text = "Location:";
-            txtScreenDir.Enabled = false;
-            txtScreenDir.Location = new Point(0x41, 0x2a);
-            txtScreenDir.Name = "txtScreenDir";
-            txtScreenDir.Size = new Size(0x17a, 20);
-            txtScreenDir.TabIndex = 1;
-            cbSaveScreenshots.AutoSize = true;
-            cbSaveScreenshots.Location = new Point(11, 0x13);
-            cbSaveScreenshots.Name = "cbSaveScreenshots";
-            cbSaveScreenshots.Size = new Size(0xae, 0x11);
-            cbSaveScreenshots.TabIndex = 0;
-            cbSaveScreenshots.Text = "Automatically save screenshots";
-            cbSaveScreenshots.UseVisualStyleBackColor = true;
-            cbSaveScreenshots.CheckedChanged += new EventHandler(cbSaveScreenshots_CheckedChanged);
-            tabPage5.Controls.Add(groupBox9);
-            tabPage5.Location = new Point(4, 0x16);
-            tabPage5.Name = "tabPage5";
-            tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(0x21e, 0xc4);
-            tabPage5.TabIndex = 4;
-            tabPage5.Text = "Advanced Poker";
-            tabPage5.UseVisualStyleBackColor = true;
-            groupBox9.Controls.Add(button2);
-            groupBox9.Controls.Add(gameslist);
-            groupBox9.Controls.Add(button1);
-            groupBox9.Controls.Add(Gametxt);
-            groupBox9.Location = new Point(6, 6);
-            groupBox9.Name = "groupBox9";
-            groupBox9.Size = new Size(530, 0xb8);
-            groupBox9.TabIndex = 0;
-            groupBox9.TabStop = false;
-            groupBox9.Text = "Additional Games";
-            button2.Location = new Point(6, 0x9e);
-            button2.Name = "button2";
-            button2.Size = new Size(0x206, 20);
-            button2.TabIndex = 4;
-            button2.Text = "Remove Selected";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += new EventHandler(button2_Click);
-            gameslist.FormattingEnabled = true;
-            gameslist.Location = new Point(6, 0x2d);
-            gameslist.Name = "gameslist";
-            gameslist.Size = new Size(0x206, 0x6c);
-            gameslist.TabIndex = 3;
-            button1.Location = new Point(0x1c1, 0x13);
-            button1.Name = "button1";
-            button1.Size = new Size(0x4b, 20);
-            button1.TabIndex = 2;
-            button1.Text = "Add Game";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += new EventHandler(button1_Click);
-            Gametxt.Location = new Point(6, 0x13);
-            Gametxt.Name = "Gametxt";
-            Gametxt.Size = new Size(0x1b5, 20);
-            Gametxt.TabIndex = 1;
-            tabPage6.Controls.Add(tabControl2);
-            tabPage6.Location = new Point(4, 0x16);
-            tabPage6.Name = "tabPage6";
-            tabPage6.Padding = new Padding(3);
-            tabPage6.Size = new Size(0x21e, 0xc4);
-            tabPage6.TabIndex = 5;
-            tabPage6.Text = "Patches";
-            tabPage6.UseVisualStyleBackColor = true;
-            tabControl2.Controls.Add(tabPage7);
-            tabControl2.Controls.Add(tabPage8);
-            tabControl2.Controls.Add(tabPage9);
-            tabControl2.Location = new Point(6, 6);
-            tabControl2.Name = "tabControl2";
-            tabControl2.SelectedIndex = 0;
-            tabControl2.Size = new Size(530, 0x75);
-            tabControl2.TabIndex = 0;
-            tabPage7.Controls.Add(label8);
-            tabPage7.Controls.Add(p_1_d);
-            tabPage7.Controls.Add(label9);
-            tabPage7.Controls.Add(label7);
-            tabPage7.Controls.Add(button4);
-            tabPage7.Controls.Add(button3);
-            tabPage7.Controls.Add(p_1_m);
-            tabPage7.Controls.Add(p_1);
-            tabPage7.Location = new Point(4, 0x16);
-            tabPage7.Name = "tabPage7";
-            tabPage7.Padding = new Padding(3);
-            tabPage7.Size = new Size(0x20a, 0x5b);
-            tabPage7.TabIndex = 0;
-            tabPage7.Text = "Patch 1";
-            tabPage7.UseVisualStyleBackColor = true;
-            label8.AutoSize = true;
-            label8.Location = new Point(10, 0x42);
-            label8.Name = "label8";
-            label8.Size = new Size(0x3f, 13);
-            label8.TabIndex = 13;
-            label8.Text = "Description:";
-            p_1_d.Location = new Point(0x4f, 0x3f);
-            p_1_d.Name = "p_1_d";
-            p_1_d.Size = new Size(0x1b2, 20);
-            p_1_d.TabIndex = 12;
-            label9.AutoSize = true;
-            label9.Location = new Point(10, 40);
-            label9.Name = "label9";
-            label9.Size = new Size(0x1f, 13);
-            label9.TabIndex = 11;
-            label9.Text = "Map:";
-            label7.AutoSize = true;
-            label7.Location = new Point(10, 14);
-            label7.Name = "label7";
-            label7.Size = new Size(0x26, 13);
-            label7.TabIndex = 11;
-            label7.Text = "Patch:";
-            button4.Location = new Point(0x1b6, 0x22);
-            button4.Name = "button4";
-            button4.Size = new Size(0x4b, 0x17);
-            button4.TabIndex = 10;
-            button4.Text = "Browse...";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += new EventHandler(button4_Click);
-            button3.Location = new Point(0x1b6, 8);
-            button3.Name = "button3";
-            button3.Size = new Size(0x4b, 0x17);
-            button3.TabIndex = 10;
-            button3.Text = "Browse...";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += new EventHandler(button3_Click);
-            p_1_m.Location = new Point(0x36, 0x25);
-            p_1_m.Name = "p_1_m";
-            p_1_m.Size = new Size(0x17a, 20);
-            p_1_m.TabIndex = 9;
-            p_1.Location = new Point(0x36, 11);
-            p_1.Name = "p_1";
-            p_1.Size = new Size(0x17a, 20);
-            p_1.TabIndex = 9;
-            tabPage8.Controls.Add(label10);
-            tabPage8.Controls.Add(p_2_d);
-            tabPage8.Controls.Add(label11);
-            tabPage8.Controls.Add(label12);
-            tabPage8.Controls.Add(button5);
-            tabPage8.Controls.Add(button6);
-            tabPage8.Controls.Add(p_2_m);
-            tabPage8.Controls.Add(p_2);
-            tabPage8.Location = new Point(4, 0x16);
-            tabPage8.Name = "tabPage8";
-            tabPage8.Padding = new Padding(3);
-            tabPage8.Size = new Size(0x20a, 0x5b);
-            tabPage8.TabIndex = 1;
-            tabPage8.Text = "Patch 2";
-            tabPage8.UseVisualStyleBackColor = true;
-            label10.AutoSize = true;
-            label10.Location = new Point(10, 0x42);
-            label10.Name = "label10";
-            label10.Size = new Size(0x3f, 13);
-            label10.TabIndex = 0x15;
-            label10.Text = "Description:";
-            p_2_d.Location = new Point(0x4f, 0x3f);
-            p_2_d.Name = "p_2_d";
-            p_2_d.Size = new Size(0x1b2, 20);
-            p_2_d.TabIndex = 20;
-            label11.AutoSize = true;
-            label11.Location = new Point(10, 40);
-            label11.Name = "label11";
-            label11.Size = new Size(0x1f, 13);
-            label11.TabIndex = 0x12;
-            label11.Text = "Map:";
-            label12.AutoSize = true;
-            label12.Location = new Point(10, 14);
-            label12.Name = "label12";
-            label12.Size = new Size(0x26, 13);
-            label12.TabIndex = 0x13;
-            label12.Text = "Patch:";
-            button5.Location = new Point(0x1b6, 0x22);
-            button5.Name = "button5";
-            button5.Size = new Size(0x4b, 0x17);
-            button5.TabIndex = 0x10;
-            button5.Text = "Browse...";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += new EventHandler(button5_Click);
-            button6.Location = new Point(0x1b6, 8);
-            button6.Name = "button6";
-            button6.Size = new Size(0x4b, 0x17);
-            button6.TabIndex = 0x11;
-            button6.Text = "Browse...";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += new EventHandler(button6_Click);
-            p_2_m.Location = new Point(0x36, 0x25);
-            p_2_m.Name = "p_2_m";
-            p_2_m.Size = new Size(0x17a, 20);
-            p_2_m.TabIndex = 14;
-            p_2.Location = new Point(0x36, 11);
-            p_2.Name = "p_2";
-            p_2.Size = new Size(0x17a, 20);
-            p_2.TabIndex = 15;
-            tabPage9.Controls.Add(label13);
-            tabPage9.Controls.Add(p_3_d);
-            tabPage9.Controls.Add(label14);
-            tabPage9.Controls.Add(label15);
-            tabPage9.Controls.Add(button7);
-            tabPage9.Controls.Add(button8);
-            tabPage9.Controls.Add(p_3_m);
-            tabPage9.Controls.Add(p_3);
-            tabPage9.Location = new Point(4, 0x16);
-            tabPage9.Name = "tabPage9";
-            tabPage9.Padding = new Padding(3);
-            tabPage9.Size = new Size(0x20a, 0x5b);
-            tabPage9.TabIndex = 2;
-            tabPage9.Text = "Patch 3";
-            tabPage9.UseVisualStyleBackColor = true;
-            label13.AutoSize = true;
-            label13.Location = new Point(10, 0x42);
-            label13.Name = "label13";
-            label13.Size = new Size(0x3f, 13);
-            label13.TabIndex = 0x15;
-            label13.Text = "Description:";
-            p_3_d.Location = new Point(0x4f, 0x3f);
-            p_3_d.Name = "p_3_d";
-            p_3_d.Size = new Size(0x1b2, 20);
-            p_3_d.TabIndex = 20;
-            label14.AutoSize = true;
-            label14.Location = new Point(10, 40);
-            label14.Name = "label14";
-            label14.Size = new Size(0x1f, 13);
-            label14.TabIndex = 0x12;
-            label14.Text = "Map:";
-            label15.AutoSize = true;
-            label15.Location = new Point(10, 14);
-            label15.Name = "label15";
-            label15.Size = new Size(0x26, 13);
-            label15.TabIndex = 0x13;
-            label15.Text = "Patch:";
-            button7.Location = new Point(0x1b6, 0x22);
-            button7.Name = "button7";
-            button7.Size = new Size(0x4b, 0x17);
-            button7.TabIndex = 0x10;
-            button7.Text = "Browse...";
-            button7.UseVisualStyleBackColor = true;
-            button7.Click += new EventHandler(button7_Click);
-            button8.Location = new Point(0x1b6, 8);
-            button8.Name = "button8";
-            button8.Size = new Size(0x4b, 0x17);
-            button8.TabIndex = 0x11;
-            button8.Text = "Browse...";
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += new EventHandler(button8_Click);
-            p_3_m.Location = new Point(0x36, 0x25);
-            p_3_m.Name = "p_3_m";
-            p_3_m.Size = new Size(0x17a, 20);
-            p_3_m.TabIndex = 14;
-            p_3.Location = new Point(0x36, 11);
-            p_3.Name = "p_3";
-            p_3.Size = new Size(0x17a, 20);
-            p_3.TabIndex = 15;
-            btnOK.Location = new Point(0x196, 0x11d);
-            btnOK.Name = "btnOK";
-            btnOK.Size = new Size(0x4b, 0x17);
-            btnOK.TabIndex = 0;
-            btnOK.Text = "OK";
-            btnOK.UseVisualStyleBackColor = true;
-            btnOK.Click += new EventHandler(btnOK_Click);
-            btnCancel.DialogResult = DialogResult.Cancel;
-            btnCancel.Location = new Point(0x1e7, 0x11d);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(0x4b, 0x17);
-            btnCancel.TabIndex = 0x17;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = true;
-            btnCancel.Click += new EventHandler(btnCancel_Click);
-            base.AcceptButton = btnOK;
-            base.AutoScaleDimensions = new SizeF(6f, 13f);
-            base.AutoScaleMode = AutoScaleMode.Font;
-            base.CancelButton = btnCancel;
-            base.ClientSize = new Size(0x23e, 320);
-            base.Controls.Add(btnCancel);
-            base.Controls.Add(btnOK);
-            base.Controls.Add(tabControl1);
-            base.Controls.Add(panel1);
-            base.FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            base.MaximizeBox = false;
-            base.MinimizeBox = false;
-            base.Name = "SettingsForm";
-            base.ShowIcon = false;
-            Text = "Settings";
-            panel1.ResumeLayout(false);
-            ((ISupportInitialize) pbxLogo).EndInit();
-            tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            tabPage3.ResumeLayout(false);
-            groupBox5.ResumeLayout(false);
-            groupBox5.PerformLayout();
-            tabPage4.ResumeLayout(false);
-            groupBox8.ResumeLayout(false);
-            groupBox8.PerformLayout();
-            udGamma.EndInit();
-            groupBox7.ResumeLayout(false);
-            groupBox7.PerformLayout();
-            udScreenHeight.EndInit();
-            udScreenWidth.EndInit();
-            groupBox6.ResumeLayout(false);
-            groupBox6.PerformLayout();
-            tabPage5.ResumeLayout(false);
-            groupBox9.ResumeLayout(false);
-            groupBox9.PerformLayout();
-            tabPage6.ResumeLayout(false);
-            tabControl2.ResumeLayout(false);
-            tabPage7.ResumeLayout(false);
-            tabPage7.PerformLayout();
-            tabPage8.ResumeLayout(false);
-            tabPage8.PerformLayout();
-            tabPage9.ResumeLayout(false);
-            tabPage9.PerformLayout();
-            base.ResumeLayout(false);
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rbForceCampaign = new System.Windows.Forms.RadioButton();
+            this.rbForceMultiplayer = new System.Windows.Forms.RadioButton();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbOpenMap = new System.Windows.Forms.CheckBox();
+            this.btnAutoMapPath = new System.Windows.Forms.Button();
+            this.lblMapToOpen = new System.Windows.Forms.Label();
+            this.txtAutoMapPath = new System.Windows.Forms.TextBox();
+            this.cbUpdates = new System.Windows.Forms.CheckBox();
+            this.txtXdkName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtRetailDir = new System.Windows.Forms.TextBox();
+            this.btnBetaDir = new System.Windows.Forms.Button();
+            this.btnRetailDir = new System.Windows.Forms.Button();
+            this.txtBetaDir = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnImageDir = new System.Windows.Forms.Button();
+            this.btnMapinfoDir = new System.Windows.Forms.Button();
+            this.btnMapDir = new System.Windows.Forms.Button();
+            this.txtImageDir = new System.Windows.Forms.TextBox();
+            this.txtMapinfoDir = new System.Windows.Forms.TextBox();
+            this.txtMapDir = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.cbOldSwapper = new System.Windows.Forms.CheckBox();
+            this.cbInvisibles = new System.Windows.Forms.CheckBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lblGamma = new System.Windows.Forms.Label();
+            this.udGamma = new System.Windows.Forms.NumericUpDown();
+            this.cbGamma = new System.Windows.Forms.CheckBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lblScreenHeight = new System.Windows.Forms.Label();
+            this.udScreenHeight = new System.Windows.Forms.NumericUpDown();
+            this.lblScreenWidth = new System.Windows.Forms.Label();
+            this.udScreenWidth = new System.Windows.Forms.NumericUpDown();
+            this.cbResizeScreens = new System.Windows.Forms.CheckBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btnScreenDir = new System.Windows.Forms.Button();
+            this.lblScreenLocation = new System.Windows.Forms.Label();
+            this.txtScreenDir = new System.Windows.Forms.TextBox();
+            this.cbSaveScreenshots = new System.Windows.Forms.CheckBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.gameslist = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Gametxt = new System.Windows.Forms.TextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.p_1_d = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.p_1_m = new System.Windows.Forms.TextBox();
+            this.p_1 = new System.Windows.Forms.TextBox();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.label10 = new System.Windows.Forms.Label();
+            this.p_2_d = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.p_2_m = new System.Windows.Forms.TextBox();
+            this.p_2 = new System.Windows.Forms.TextBox();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.p_3_d = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.p_3_m = new System.Windows.Forms.TextBox();
+            this.p_3 = new System.Windows.Forms.TextBox();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udGamma)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udScreenHeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udScreenWidth)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(79, 11);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(681, 36);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Ascension Settings";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Controls.Add(this.pbxLogo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(765, 63);
+            this.panel1.TabIndex = 21;
+            // 
+            // pbxLogo
+            // 
+            this.pbxLogo.Location = new System.Drawing.Point(4, 4);
+            this.pbxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(67, 55);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxLogo.TabIndex = 4;
+            this.pbxLogo.TabStop = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Location = new System.Drawing.Point(16, 70);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(733, 273);
+            this.tabControl1.TabIndex = 22;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.button9);
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.groupBox3);
+            this.tabPage1.Controls.Add(this.txtXdkName);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(725, 244);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "General";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rbForceCampaign);
+            this.groupBox4.Controls.Add(this.rbForceMultiplayer);
+            this.groupBox4.Location = new System.Drawing.Point(8, 180);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(707, 54);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Force Map Loading (does not apply to ff10_prototype)";
+            // 
+            // rbForceCampaign
+            // 
+            this.rbForceCampaign.AutoSize = true;
+            this.rbForceCampaign.Location = new System.Drawing.Point(181, 23);
+            this.rbForceCampaign.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbForceCampaign.Name = "rbForceCampaign";
+            this.rbForceCampaign.Size = new System.Drawing.Size(147, 21);
+            this.rbForceCampaign.TabIndex = 1;
+            this.rbForceCampaign.TabStop = true;
+            this.rbForceCampaign.Text = "Load as Campaign";
+            this.rbForceCampaign.UseVisualStyleBackColor = true;
+            // 
+            // rbForceMultiplayer
+            // 
+            this.rbForceMultiplayer.AutoSize = true;
+            this.rbForceMultiplayer.Location = new System.Drawing.Point(15, 23);
+            this.rbForceMultiplayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbForceMultiplayer.Name = "rbForceMultiplayer";
+            this.rbForceMultiplayer.Size = new System.Drawing.Size(152, 21);
+            this.rbForceMultiplayer.TabIndex = 0;
+            this.rbForceMultiplayer.TabStop = true;
+            this.rbForceMultiplayer.Text = "Load as Multiplayer";
+            this.rbForceMultiplayer.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cbOpenMap);
+            this.groupBox3.Controls.Add(this.btnAutoMapPath);
+            this.groupBox3.Controls.Add(this.lblMapToOpen);
+            this.groupBox3.Controls.Add(this.txtAutoMapPath);
+            this.groupBox3.Controls.Add(this.cbUpdates);
+            this.groupBox3.Location = new System.Drawing.Point(8, 43);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(7, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(707, 129);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Startup";
+            // 
+            // cbOpenMap
+            // 
+            this.cbOpenMap.AutoSize = true;
+            this.cbOpenMap.Location = new System.Drawing.Point(15, 52);
+            this.cbOpenMap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOpenMap.Name = "cbOpenMap";
+            this.cbOpenMap.Size = new System.Drawing.Size(214, 21);
+            this.cbOpenMap.TabIndex = 4;
+            this.cbOpenMap.Text = "Automatically open a map file";
+            this.cbOpenMap.UseVisualStyleBackColor = true;
+            this.cbOpenMap.CheckedChanged += new System.EventHandler(this.cbOpenMap_CheckedChanged);
+            // 
+            // btnAutoMapPath
+            // 
+            this.btnAutoMapPath.Enabled = false;
+            this.btnAutoMapPath.Location = new System.Drawing.Point(599, 81);
+            this.btnAutoMapPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAutoMapPath.Name = "btnAutoMapPath";
+            this.btnAutoMapPath.Size = new System.Drawing.Size(100, 28);
+            this.btnAutoMapPath.TabIndex = 3;
+            this.btnAutoMapPath.Text = "Browse...";
+            this.btnAutoMapPath.UseVisualStyleBackColor = true;
+            this.btnAutoMapPath.Click += new System.EventHandler(this.btnAutoMapPath_Click);
+            // 
+            // lblMapToOpen
+            // 
+            this.lblMapToOpen.AutoSize = true;
+            this.lblMapToOpen.Enabled = false;
+            this.lblMapToOpen.Location = new System.Drawing.Point(11, 87);
+            this.lblMapToOpen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMapToOpen.Name = "lblMapToOpen";
+            this.lblMapToOpen.Size = new System.Drawing.Size(91, 17);
+            this.lblMapToOpen.TabIndex = 2;
+            this.lblMapToOpen.Text = "Map to open:";
+            // 
+            // txtAutoMapPath
+            // 
+            this.txtAutoMapPath.Enabled = false;
+            this.txtAutoMapPath.Location = new System.Drawing.Point(112, 84);
+            this.txtAutoMapPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAutoMapPath.Name = "txtAutoMapPath";
+            this.txtAutoMapPath.Size = new System.Drawing.Size(477, 22);
+            this.txtAutoMapPath.TabIndex = 1;
+            // 
+            // cbUpdates
+            // 
+            this.cbUpdates.AutoSize = true;
+            this.cbUpdates.Enabled = false;
+            this.cbUpdates.Location = new System.Drawing.Point(15, 23);
+            this.cbUpdates.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbUpdates.Name = "cbUpdates";
+            this.cbUpdates.Size = new System.Drawing.Size(145, 21);
+            this.cbUpdates.TabIndex = 0;
+            this.cbUpdates.Text = "Check for updates";
+            this.cbUpdates.UseVisualStyleBackColor = true;
+            // 
+            // txtXdkName
+            // 
+            this.txtXdkName.Location = new System.Drawing.Point(123, 11);
+            this.txtXdkName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtXdkName.Name = "txtXdkName";
+            this.txtXdkName.Size = new System.Drawing.Size(235, 22);
+            this.txtXdkName.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "XDK Name/IP:";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(725, 244);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Paths";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.txtRetailDir);
+            this.groupBox2.Controls.Add(this.btnBetaDir);
+            this.groupBox2.Controls.Add(this.btnRetailDir);
+            this.groupBox2.Controls.Add(this.txtBetaDir);
+            this.groupBox2.Location = new System.Drawing.Point(8, 138);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(707, 96);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Plugin Paths";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(11, 62);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 17);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Beta Plugins:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 30);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 17);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Retail Plugins:";
+            // 
+            // txtRetailDir
+            // 
+            this.txtRetailDir.Location = new System.Drawing.Point(120, 27);
+            this.txtRetailDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRetailDir.Name = "txtRetailDir";
+            this.txtRetailDir.Size = new System.Drawing.Size(469, 22);
+            this.txtRetailDir.TabIndex = 14;
+            // 
+            // btnBetaDir
+            // 
+            this.btnBetaDir.Location = new System.Drawing.Point(599, 55);
+            this.btnBetaDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBetaDir.Name = "btnBetaDir";
+            this.btnBetaDir.Size = new System.Drawing.Size(100, 28);
+            this.btnBetaDir.TabIndex = 13;
+            this.btnBetaDir.Text = "Browse...";
+            this.btnBetaDir.UseVisualStyleBackColor = true;
+            this.btnBetaDir.Click += new System.EventHandler(this.btnBetaDir_Click);
+            // 
+            // btnRetailDir
+            // 
+            this.btnRetailDir.Location = new System.Drawing.Point(599, 25);
+            this.btnRetailDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRetailDir.Name = "btnRetailDir";
+            this.btnRetailDir.Size = new System.Drawing.Size(100, 28);
+            this.btnRetailDir.TabIndex = 12;
+            this.btnRetailDir.Text = "Browse...";
+            this.btnRetailDir.UseVisualStyleBackColor = true;
+            this.btnRetailDir.Click += new System.EventHandler(this.btnRetailDir_Click);
+            // 
+            // txtBetaDir
+            // 
+            this.txtBetaDir.Location = new System.Drawing.Point(120, 58);
+            this.txtBetaDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBetaDir.Name = "txtBetaDir";
+            this.txtBetaDir.Size = new System.Drawing.Size(469, 22);
+            this.txtBetaDir.TabIndex = 11;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnImageDir);
+            this.groupBox1.Controls.Add(this.btnMapinfoDir);
+            this.groupBox1.Controls.Add(this.btnMapDir);
+            this.groupBox1.Controls.Add(this.txtImageDir);
+            this.groupBox1.Controls.Add(this.txtMapinfoDir);
+            this.groupBox1.Controls.Add(this.txtMapDir);
+            this.groupBox1.Location = new System.Drawing.Point(8, 7);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(7, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(707, 123);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "General Paths";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(11, 91);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Map Images:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(11, 59);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "MapInfo:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 27);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Maps:";
+            // 
+            // btnImageDir
+            // 
+            this.btnImageDir.Location = new System.Drawing.Point(599, 85);
+            this.btnImageDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnImageDir.Name = "btnImageDir";
+            this.btnImageDir.Size = new System.Drawing.Size(100, 28);
+            this.btnImageDir.TabIndex = 7;
+            this.btnImageDir.Text = "Browse...";
+            this.btnImageDir.UseVisualStyleBackColor = true;
+            this.btnImageDir.Click += new System.EventHandler(this.btnImageDir_Click);
+            // 
+            // btnMapinfoDir
+            // 
+            this.btnMapinfoDir.Location = new System.Drawing.Point(599, 53);
+            this.btnMapinfoDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMapinfoDir.Name = "btnMapinfoDir";
+            this.btnMapinfoDir.Size = new System.Drawing.Size(100, 28);
+            this.btnMapinfoDir.TabIndex = 6;
+            this.btnMapinfoDir.Text = "Browse...";
+            this.btnMapinfoDir.UseVisualStyleBackColor = true;
+            this.btnMapinfoDir.Click += new System.EventHandler(this.btnMapinfoDir_Click);
+            // 
+            // btnMapDir
+            // 
+            this.btnMapDir.Location = new System.Drawing.Point(599, 21);
+            this.btnMapDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMapDir.Name = "btnMapDir";
+            this.btnMapDir.Size = new System.Drawing.Size(100, 28);
+            this.btnMapDir.TabIndex = 5;
+            this.btnMapDir.Text = "Browse...";
+            this.btnMapDir.UseVisualStyleBackColor = true;
+            this.btnMapDir.Click += new System.EventHandler(this.btnMapDir_Click);
+            // 
+            // txtImageDir
+            // 
+            this.txtImageDir.Location = new System.Drawing.Point(120, 87);
+            this.txtImageDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtImageDir.Name = "txtImageDir";
+            this.txtImageDir.Size = new System.Drawing.Size(469, 22);
+            this.txtImageDir.TabIndex = 2;
+            // 
+            // txtMapinfoDir
+            // 
+            this.txtMapinfoDir.Location = new System.Drawing.Point(120, 55);
+            this.txtMapinfoDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMapinfoDir.Name = "txtMapinfoDir";
+            this.txtMapinfoDir.Size = new System.Drawing.Size(469, 22);
+            this.txtMapinfoDir.TabIndex = 1;
+            // 
+            // txtMapDir
+            // 
+            this.txtMapDir.Location = new System.Drawing.Point(120, 23);
+            this.txtMapDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMapDir.Name = "txtMapDir";
+            this.txtMapDir.Size = new System.Drawing.Size(469, 22);
+            this.txtMapDir.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Size = new System.Drawing.Size(725, 244);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Editor";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.cbOldSwapper);
+            this.groupBox5.Controls.Add(this.cbInvisibles);
+            this.groupBox5.Location = new System.Drawing.Point(8, 7);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(7, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(707, 82);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tag Editor";
+            // 
+            // cbOldSwapper
+            // 
+            this.cbOldSwapper.AutoSize = true;
+            this.cbOldSwapper.Location = new System.Drawing.Point(15, 52);
+            this.cbOldSwapper.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOldSwapper.Name = "cbOldSwapper";
+            this.cbOldSwapper.Size = new System.Drawing.Size(194, 21);
+            this.cbOldSwapper.TabIndex = 2;
+            this.cbOldSwapper.Text = "Use the old ident swapper";
+            this.cbOldSwapper.UseVisualStyleBackColor = true;
+            // 
+            // cbInvisibles
+            // 
+            this.cbInvisibles.AutoSize = true;
+            this.cbInvisibles.Location = new System.Drawing.Point(15, 23);
+            this.cbInvisibles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbInvisibles.Name = "cbInvisibles";
+            this.cbInvisibles.Size = new System.Drawing.Size(163, 21);
+            this.cbInvisibles.TabIndex = 0;
+            this.cbInvisibles.Text = "Show invisible values";
+            this.cbInvisibles.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.groupBox8);
+            this.tabPage4.Controls.Add(this.groupBox7);
+            this.tabPage4.Controls.Add(this.groupBox6);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Size = new System.Drawing.Size(725, 244);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Screenshots";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lblGamma);
+            this.groupBox8.Controls.Add(this.udGamma);
+            this.groupBox8.Controls.Add(this.cbGamma);
+            this.groupBox8.Location = new System.Drawing.Point(364, 105);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(7, 4, 4, 4);
+            this.groupBox8.Size = new System.Drawing.Size(351, 123);
+            this.groupBox8.TabIndex = 2;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Gamma Adjustment";
+            // 
+            // lblGamma
+            // 
+            this.lblGamma.AutoSize = true;
+            this.lblGamma.Enabled = false;
+            this.lblGamma.Location = new System.Drawing.Point(11, 54);
+            this.lblGamma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGamma.Name = "lblGamma";
+            this.lblGamma.Size = new System.Drawing.Size(60, 17);
+            this.lblGamma.TabIndex = 2;
+            this.lblGamma.Text = "Amount:";
+            // 
+            // udGamma
+            // 
+            this.udGamma.DecimalPlaces = 2;
+            this.udGamma.Enabled = false;
+            this.udGamma.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.udGamma.Location = new System.Drawing.Point(80, 52);
+            this.udGamma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.udGamma.Name = "udGamma";
+            this.udGamma.Size = new System.Drawing.Size(75, 22);
+            this.udGamma.TabIndex = 1;
+            // 
+            // cbGamma
+            // 
+            this.cbGamma.AutoSize = true;
+            this.cbGamma.Location = new System.Drawing.Point(15, 23);
+            this.cbGamma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGamma.Name = "cbGamma";
+            this.cbGamma.Size = new System.Drawing.Size(119, 21);
+            this.cbGamma.TabIndex = 0;
+            this.cbGamma.Text = "Adjust gamma";
+            this.cbGamma.UseVisualStyleBackColor = true;
+            this.cbGamma.CheckedChanged += new System.EventHandler(this.cbGamma_CheckedChanged);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.lblScreenHeight);
+            this.groupBox7.Controls.Add(this.udScreenHeight);
+            this.groupBox7.Controls.Add(this.lblScreenWidth);
+            this.groupBox7.Controls.Add(this.udScreenWidth);
+            this.groupBox7.Controls.Add(this.cbResizeScreens);
+            this.groupBox7.Location = new System.Drawing.Point(8, 105);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(7, 4, 4, 4);
+            this.groupBox7.Size = new System.Drawing.Size(348, 123);
+            this.groupBox7.TabIndex = 1;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Resizing";
+            // 
+            // lblScreenHeight
+            // 
+            this.lblScreenHeight.AutoSize = true;
+            this.lblScreenHeight.Enabled = false;
+            this.lblScreenHeight.Location = new System.Drawing.Point(11, 86);
+            this.lblScreenHeight.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblScreenHeight.Name = "lblScreenHeight";
+            this.lblScreenHeight.Size = new System.Drawing.Size(53, 17);
+            this.lblScreenHeight.TabIndex = 4;
+            this.lblScreenHeight.Text = "Height:";
+            // 
+            // udScreenHeight
+            // 
+            this.udScreenHeight.Enabled = false;
+            this.udScreenHeight.Location = new System.Drawing.Point(73, 84);
+            this.udScreenHeight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.udScreenHeight.Maximum = new decimal(new int[] {
+            1080,
+            0,
+            0,
+            0});
+            this.udScreenHeight.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.udScreenHeight.Name = "udScreenHeight";
+            this.udScreenHeight.Size = new System.Drawing.Size(77, 22);
+            this.udScreenHeight.TabIndex = 3;
+            this.udScreenHeight.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
+            // lblScreenWidth
+            // 
+            this.lblScreenWidth.AutoSize = true;
+            this.lblScreenWidth.Enabled = false;
+            this.lblScreenWidth.Location = new System.Drawing.Point(11, 54);
+            this.lblScreenWidth.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblScreenWidth.Name = "lblScreenWidth";
+            this.lblScreenWidth.Size = new System.Drawing.Size(48, 17);
+            this.lblScreenWidth.TabIndex = 2;
+            this.lblScreenWidth.Text = "Width:";
+            // 
+            // udScreenWidth
+            // 
+            this.udScreenWidth.Enabled = false;
+            this.udScreenWidth.Location = new System.Drawing.Point(73, 52);
+            this.udScreenWidth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.udScreenWidth.Maximum = new decimal(new int[] {
+            1920,
+            0,
+            0,
+            0});
+            this.udScreenWidth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.udScreenWidth.Name = "udScreenWidth";
+            this.udScreenWidth.Size = new System.Drawing.Size(77, 22);
+            this.udScreenWidth.TabIndex = 1;
+            this.udScreenWidth.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
+            // cbResizeScreens
+            // 
+            this.cbResizeScreens.AutoSize = true;
+            this.cbResizeScreens.Location = new System.Drawing.Point(15, 23);
+            this.cbResizeScreens.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbResizeScreens.Name = "cbResizeScreens";
+            this.cbResizeScreens.Size = new System.Drawing.Size(154, 21);
+            this.cbResizeScreens.TabIndex = 0;
+            this.cbResizeScreens.Text = "Resize screenshots";
+            this.cbResizeScreens.UseVisualStyleBackColor = true;
+            this.cbResizeScreens.CheckedChanged += new System.EventHandler(this.cbResizeScreens_CheckedChanged);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btnScreenDir);
+            this.groupBox6.Controls.Add(this.lblScreenLocation);
+            this.groupBox6.Controls.Add(this.txtScreenDir);
+            this.groupBox6.Controls.Add(this.cbSaveScreenshots);
+            this.groupBox6.Location = new System.Drawing.Point(8, 7);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(7, 4, 4, 4);
+            this.groupBox6.Size = new System.Drawing.Size(707, 90);
+            this.groupBox6.TabIndex = 0;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Saving";
+            // 
+            // btnScreenDir
+            // 
+            this.btnScreenDir.Enabled = false;
+            this.btnScreenDir.Location = new System.Drawing.Point(599, 49);
+            this.btnScreenDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScreenDir.Name = "btnScreenDir";
+            this.btnScreenDir.Size = new System.Drawing.Size(100, 28);
+            this.btnScreenDir.TabIndex = 3;
+            this.btnScreenDir.Text = "Browse...";
+            this.btnScreenDir.UseVisualStyleBackColor = true;
+            this.btnScreenDir.Click += new System.EventHandler(this.btnScreenDir_Click);
+            // 
+            // lblScreenLocation
+            // 
+            this.lblScreenLocation.AutoSize = true;
+            this.lblScreenLocation.Enabled = false;
+            this.lblScreenLocation.Location = new System.Drawing.Point(11, 55);
+            this.lblScreenLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblScreenLocation.Name = "lblScreenLocation";
+            this.lblScreenLocation.Size = new System.Drawing.Size(66, 17);
+            this.lblScreenLocation.TabIndex = 2;
+            this.lblScreenLocation.Text = "Location:";
+            // 
+            // txtScreenDir
+            // 
+            this.txtScreenDir.Enabled = false;
+            this.txtScreenDir.Location = new System.Drawing.Point(87, 52);
+            this.txtScreenDir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtScreenDir.Name = "txtScreenDir";
+            this.txtScreenDir.Size = new System.Drawing.Size(503, 22);
+            this.txtScreenDir.TabIndex = 1;
+            // 
+            // cbSaveScreenshots
+            // 
+            this.cbSaveScreenshots.AutoSize = true;
+            this.cbSaveScreenshots.Location = new System.Drawing.Point(15, 23);
+            this.cbSaveScreenshots.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSaveScreenshots.Name = "cbSaveScreenshots";
+            this.cbSaveScreenshots.Size = new System.Drawing.Size(228, 21);
+            this.cbSaveScreenshots.TabIndex = 0;
+            this.cbSaveScreenshots.Text = "Automatically save screenshots";
+            this.cbSaveScreenshots.UseVisualStyleBackColor = true;
+            this.cbSaveScreenshots.CheckedChanged += new System.EventHandler(this.cbSaveScreenshots_CheckedChanged);
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.groupBox9);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Size = new System.Drawing.Size(725, 244);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Advanced Poker";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.button2);
+            this.groupBox9.Controls.Add(this.gameslist);
+            this.groupBox9.Controls.Add(this.button1);
+            this.groupBox9.Controls.Add(this.Gametxt);
+            this.groupBox9.Location = new System.Drawing.Point(8, 7);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Size = new System.Drawing.Size(707, 226);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Additional Games";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(8, 194);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(691, 25);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Remove Selected";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // gameslist
+            // 
+            this.gameslist.FormattingEnabled = true;
+            this.gameslist.ItemHeight = 16;
+            this.gameslist.Location = new System.Drawing.Point(8, 55);
+            this.gameslist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gameslist.Name = "gameslist";
+            this.gameslist.Size = new System.Drawing.Size(689, 132);
+            this.gameslist.TabIndex = 3;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(599, 23);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 25);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Add Game";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Gametxt
+            // 
+            this.Gametxt.Location = new System.Drawing.Point(8, 23);
+            this.Gametxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Gametxt.Name = "Gametxt";
+            this.Gametxt.Size = new System.Drawing.Size(581, 22);
+            this.Gametxt.TabIndex = 1;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.tabControl2);
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage6.Size = new System.Drawing.Size(725, 244);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Patches";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabControl2
+            // 
+            this.tabControl2.Controls.Add(this.tabPage7);
+            this.tabControl2.Controls.Add(this.tabPage8);
+            this.tabControl2.Controls.Add(this.tabPage9);
+            this.tabControl2.Location = new System.Drawing.Point(8, 7);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(707, 144);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.label8);
+            this.tabPage7.Controls.Add(this.p_1_d);
+            this.tabPage7.Controls.Add(this.label9);
+            this.tabPage7.Controls.Add(this.label7);
+            this.tabPage7.Controls.Add(this.button4);
+            this.tabPage7.Controls.Add(this.button3);
+            this.tabPage7.Controls.Add(this.p_1_m);
+            this.tabPage7.Controls.Add(this.p_1);
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage7.Size = new System.Drawing.Size(699, 115);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "Patch 1";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 81);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(83, 17);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Description:";
+            // 
+            // p_1_d
+            // 
+            this.p_1_d.Location = new System.Drawing.Point(105, 78);
+            this.p_1_d.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_1_d.Name = "p_1_d";
+            this.p_1_d.Size = new System.Drawing.Size(577, 22);
+            this.p_1_d.TabIndex = 12;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 49);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 17);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Map:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 17);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Patch:";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(584, 42);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 28);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Browse...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(584, 10);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 28);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Browse...";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // p_1_m
+            // 
+            this.p_1_m.Location = new System.Drawing.Point(72, 46);
+            this.p_1_m.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_1_m.Name = "p_1_m";
+            this.p_1_m.Size = new System.Drawing.Size(503, 22);
+            this.p_1_m.TabIndex = 9;
+            // 
+            // p_1
+            // 
+            this.p_1.Location = new System.Drawing.Point(72, 14);
+            this.p_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_1.Name = "p_1";
+            this.p_1.Size = new System.Drawing.Size(503, 22);
+            this.p_1.TabIndex = 9;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.label10);
+            this.tabPage8.Controls.Add(this.p_2_d);
+            this.tabPage8.Controls.Add(this.label11);
+            this.tabPage8.Controls.Add(this.label12);
+            this.tabPage8.Controls.Add(this.button5);
+            this.tabPage8.Controls.Add(this.button6);
+            this.tabPage8.Controls.Add(this.p_2_m);
+            this.tabPage8.Controls.Add(this.p_2);
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage8.Size = new System.Drawing.Size(699, 115);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "Patch 2";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(13, 81);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(83, 17);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Description:";
+            // 
+            // p_2_d
+            // 
+            this.p_2_d.Location = new System.Drawing.Point(105, 78);
+            this.p_2_d.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_2_d.Name = "p_2_d";
+            this.p_2_d.Size = new System.Drawing.Size(577, 22);
+            this.p_2_d.TabIndex = 20;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(13, 49);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 17);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Map:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(13, 17);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(48, 17);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Patch:";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(584, 42);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 28);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Browse...";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(584, 10);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 28);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Browse...";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // p_2_m
+            // 
+            this.p_2_m.Location = new System.Drawing.Point(72, 46);
+            this.p_2_m.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_2_m.Name = "p_2_m";
+            this.p_2_m.Size = new System.Drawing.Size(503, 22);
+            this.p_2_m.TabIndex = 14;
+            // 
+            // p_2
+            // 
+            this.p_2.Location = new System.Drawing.Point(72, 14);
+            this.p_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_2.Name = "p_2";
+            this.p_2.Size = new System.Drawing.Size(503, 22);
+            this.p_2.TabIndex = 15;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.label13);
+            this.tabPage9.Controls.Add(this.p_3_d);
+            this.tabPage9.Controls.Add(this.label14);
+            this.tabPage9.Controls.Add(this.label15);
+            this.tabPage9.Controls.Add(this.button7);
+            this.tabPage9.Controls.Add(this.button8);
+            this.tabPage9.Controls.Add(this.p_3_m);
+            this.tabPage9.Controls.Add(this.p_3);
+            this.tabPage9.Location = new System.Drawing.Point(4, 25);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage9.Size = new System.Drawing.Size(699, 115);
+            this.tabPage9.TabIndex = 2;
+            this.tabPage9.Text = "Patch 3";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(13, 81);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 17);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Description:";
+            // 
+            // p_3_d
+            // 
+            this.p_3_d.Location = new System.Drawing.Point(105, 78);
+            this.p_3_d.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_3_d.Name = "p_3_d";
+            this.p_3_d.Size = new System.Drawing.Size(577, 22);
+            this.p_3_d.TabIndex = 20;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(13, 49);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(39, 17);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Map:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(13, 17);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 17);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Patch:";
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(584, 42);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 28);
+            this.button7.TabIndex = 16;
+            this.button7.Text = "Browse...";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(584, 10);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(100, 28);
+            this.button8.TabIndex = 17;
+            this.button8.Text = "Browse...";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // p_3_m
+            // 
+            this.p_3_m.Location = new System.Drawing.Point(72, 46);
+            this.p_3_m.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_3_m.Name = "p_3_m";
+            this.p_3_m.Size = new System.Drawing.Size(503, 22);
+            this.p_3_m.TabIndex = 14;
+            // 
+            // p_3
+            // 
+            this.p_3.Location = new System.Drawing.Point(72, 14);
+            this.p_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p_3.Name = "p_3";
+            this.p_3.Size = new System.Drawing.Size(503, 22);
+            this.p_3.TabIndex = 15;
+            // 
+            // btnOK
+            // 
+            this.btnOK.Location = new System.Drawing.Point(541, 351);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(100, 28);
+            this.btnOK.TabIndex = 0;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(649, 351);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(100, 28);
+            this.btnCancel.TabIndex = 23;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(365, 11);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "Find IP";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // SettingsForm
+            // 
+            this.AcceptButton = this.btnOK;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(765, 394);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "SettingsForm";
+            this.ShowIcon = false;
+            this.Text = "Settings";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udGamma)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udScreenHeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.udScreenWidth)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Util.Connect();
+            txtXdkName.Text = Util.XboxIP();
         }
     }
 }
